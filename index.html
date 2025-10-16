@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Finansial Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Aplikasi Pengelolaan Keuangan</h1>
+    </header>
+
+    <main>
+      <section id="input-section">
+        <h2>Tambah Transaksi</h2>
+
+        <!-- Form untuk Pemasukan -->
+        <div class="form-group">
+          <h3>Pemasukan (Uang Masuk)</h3>
+          <form id="income-form">
+            <input type="text" id="income-description" placeholder="Deskripsi (contoh: Gaji)" required />
+            <input type="number" id="income-amount" placeholder="Jumlah (Rp)" min="1" required />
+            <button type="submit">Tambah Pemasukan</button>
+          </form>
+        </div>
+
+        <!-- Form untuk Pengeluaran -->
+        <div class="form-group">
+          <h3>Pengeluaran (Uang Keluar)</h3>
+          <form id="expense-form">
+            <input type="text" id="expense-description" placeholder="Deskripsi (contoh: Makan)" required />
+            <input type="number" id="expense-amount" placeholder="Jumlah (Rp)" min="1" required />
+            <button type="submit">Tambah Pengeluaran</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="balance-section">
+        <h2>Saldo Total</h2>
+        <p id="total-balance">Rp 0</p>
+      </section>
+
+      <section id="history-section">
+        <h2>Riwayat Transaksi</h2>
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Tipe</th>
+              <th>Deskripsi</th>
+              <th>Jumlah (Rp)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Riwayat transaksi akan ditampilkan di sini -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
